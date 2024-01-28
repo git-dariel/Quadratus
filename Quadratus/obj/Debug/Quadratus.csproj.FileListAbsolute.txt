@@ -1,0 +1,12 @@
+C:\Users\Dariel\source\repos\Quadratus\Quadratus\bin\Debug\Quadratus.exe.config
+C:\Users\Dariel\source\repos\Quadratus\Quadratus\bin\Debug\Quadratus.exe
+C:\Users\Dariel\source\repos\Quadratus\Quadratus\bin\Debug\Quadratus.pdb
+C:\Users\Dariel\source\repos\Quadratus\Quadratus\obj\Debug\Quadratus.csproj.AssemblyReference.cache
+C:\Users\Dariel\source\repos\Quadratus\Quadratus\obj\Debug\Quadratus.Form1.resources
+C:\Users\Dariel\source\repos\Quadratus\Quadratus\obj\Debug\Quadratus.Properties.Resources.resources
+C:\Users\Dariel\source\repos\Quadratus\Quadratus\obj\Debug\Quadratus.csproj.GenerateResource.cache
+C:\Users\Dariel\source\repos\Quadratus\Quadratus\obj\Debug\Quadratus.csproj.CoreCompileInputs.cache
+C:\Users\Dariel\source\repos\Quadratus\Quadratus\obj\Debug\Quadratus.exe
+C:\Users\Dariel\source\repos\Quadratus\Quadratus\obj\Debug\Quadratus.pdb
+C:\Users\Dariel\source\repos\Quadratus\Quadratus\obj\Debug\Quadratus.SignUp.resources
+C:\Users\Dariel\source\repos\Quadratus\Quadratus\obj\Debug\Quadratus.Sign_In.resources
