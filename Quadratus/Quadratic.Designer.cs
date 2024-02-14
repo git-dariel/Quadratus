@@ -40,7 +40,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnGenerate = new System.Windows.Forms.Button();
             this.rtOutput = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pbHistory = new System.Windows.Forms.PictureBox();
+            this.pbProfile = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfile)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -132,6 +137,7 @@
             // btnGenerate
             // 
             this.btnGenerate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(215)))), ((int)(((byte)(221)))));
+            this.btnGenerate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGenerate.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerate.Location = new System.Drawing.Point(162, 379);
@@ -145,18 +151,58 @@
             // rtOutput
             // 
             this.rtOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rtOutput.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtOutput.Location = new System.Drawing.Point(451, 12);
             this.rtOutput.Name = "rtOutput";
-            this.rtOutput.Size = new System.Drawing.Size(444, 469);
+            this.rtOutput.Size = new System.Drawing.Size(444, 389);
             this.rtOutput.TabIndex = 10;
             this.rtOutput.Text = "";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(236)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(620, 416);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 43);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Clear 🗑️";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pbHistory
+            // 
+            this.pbHistory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbHistory.Image = ((System.Drawing.Image)(resources.GetObject("pbHistory.Image")));
+            this.pbHistory.Location = new System.Drawing.Point(12, 12);
+            this.pbHistory.Name = "pbHistory";
+            this.pbHistory.Size = new System.Drawing.Size(28, 36);
+            this.pbHistory.TabIndex = 12;
+            this.pbHistory.TabStop = false;
+            this.pbHistory.Click += new System.EventHandler(this.pbHistory_Click);
+            // 
+            // pbProfile
+            // 
+            this.pbProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbProfile.Image = ((System.Drawing.Image)(resources.GetObject("pbProfile.Image")));
+            this.pbProfile.Location = new System.Drawing.Point(923, 12);
+            this.pbProfile.Name = "pbProfile";
+            this.pbProfile.Size = new System.Drawing.Size(28, 36);
+            this.pbProfile.TabIndex = 13;
+            this.pbProfile.TabStop = false;
+            this.pbProfile.Click += new System.EventHandler(this.pbProfile_Click);
             // 
             // Quadratic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(914, 496);
+            this.ClientSize = new System.Drawing.Size(969, 496);
+            this.Controls.Add(this.pbProfile);
+            this.Controls.Add(this.pbHistory);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.rtOutput);
             this.Controls.Add(this.btnGenerate);
             this.Controls.Add(this.txtC);
@@ -173,6 +219,8 @@
             this.Name = "Quadratic";
             this.Text = "Quadratic";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfile)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,5 +239,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnGenerate;
         private System.Windows.Forms.RichTextBox rtOutput;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pbHistory;
+        private System.Windows.Forms.PictureBox pbProfile;
     }
 }

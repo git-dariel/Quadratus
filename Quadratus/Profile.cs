@@ -10,19 +10,15 @@ using System.Windows.Forms;
 
 namespace Quadratus
 {
-    public partial class Form1 : Form
+    public partial class Profile : Form
     {
-        public Form1()
+
+        public Profile()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Sign_In signIn = new Sign_In();
-            signIn.ShowDialog();
-        }
+        
     }
 }

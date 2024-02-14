@@ -7,21 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net.Http;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using Newtonsoft.Json;
 using System.Data.SqlClient;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using Newtonsoft.Json;
+using System.Net.Http;
 
 namespace Quadratus
 {
-    public partial class Quadratic : Form
+    public partial class Linear : Form
     {
         DateTime currentDateTime;
         string formattedDateTime;
-        string equationText = "Quadratic Equation";
+        string equationText = "Linear Equation";
         //int userIdCounter = 1;
-        public Quadratic()
+
+        public Linear()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -32,17 +31,17 @@ namespace Quadratus
 
         SqlConnection con = new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=quadratus;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
-        private async void btnGenerate_Click_1(object sender, EventArgs e)
+        private async void btnGenerate_Click(object sender, EventArgs e)
         {
             //int userID = userIdCounter++;
 
             //Show the loading message
             rtOutput.Text = "Generating, please wait...\n\n";
 
-            double a, b, c;
+            double a, b;
 
             // Parse coefficients from textboxes
-            if (!double.TryParse(txtA.Text, out a) || !double.TryParse(txtB.Text, out b) || !double.TryParse(txtC.Text, out c))
+            if (!double.TryParse(txtA.Text, out a) || !double.TryParse(txtB.Text, out b))
             {
                 MessageBox.Show("Invalid coefficients. Please enter valid numbers.");
                 //Clear the loading message
@@ -51,7 +50,7 @@ namespace Quadratus
             }
 
             // Formulate the quadratic equation as a natural language query
-            string query = $"Solve the equation {a}x^2 + {b}x + {c} = 0. And then give me the answer make it professional." +
+            string query = $"Solve the equation {a}x + {b} = 0. And then give me the answer make it professional." +
                 $"After that provide a step by step on how you solve that problem. Indicate the Answer in the last output.";
 
             // Create a JSON object to represent the payload
@@ -83,14 +82,11 @@ namespace Quadratus
                     // Assuming the last message in the "choices" array contains the answer
                     string answer = responseObj.choices[0].message.content.ToString();
 
-                    foreach(char character in answer)
+                    foreach (char character in answer)
                     {
                         rtOutput.AppendText(character.ToString());
                         await Task.Delay(10);
                     }
-
-                    // Display the answer in a label or textbox
-                    //rtOutput.Text = answer;
 
                     addQuadraticEquation(equationText, answer, formattedDateTime);
                 }
@@ -119,15 +115,17 @@ namespace Quadratus
                 MessageBox.Show("Generated Successfully!", "Complete!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show("Error: " + ex.Message);
             }
-            finally {
+            finally
+            {
                 con.Close();
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
             // Ask for confirmation before clearing the text
             DialogResult result = MessageBox.Show("Are you sure you want to clear the text?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -138,7 +136,6 @@ namespace Quadratus
                 rtOutput.Clear();
                 txtA.Clear();
                 txtB.Clear();
-                txtC.Clear();
             }
         }
 
@@ -161,7 +158,6 @@ namespace Quadratus
                 Form1 form = new Form1();
                 form.Show();
             }
-           
         }
     }
 }

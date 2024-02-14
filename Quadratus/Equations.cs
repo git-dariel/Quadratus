@@ -24,5 +24,18 @@ namespace Quadratus
             Quadratic quadratic = new Quadratic();
             quadratic.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Linear linear = new Linear();
+            linear.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Exponential exponential = new Exponential();
+            exponential.Show();
+        }
     }
 }

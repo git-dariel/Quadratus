@@ -47,3 +47,11 @@ C:\Users\Dariel\source\repos\Quadratus\Quadratus\bin\Debug\System.Threading.Task
 C:\Users\Dariel\source\repos\Quadratus\Quadratus\obj\Debug\Quadratus.csproj.CopyComplete
 C:\Users\Dariel\source\repos\Quadratus\Quadratus\obj\Debug\Quadratus.Equations.resources
 C:\Users\Dariel\source\repos\Quadratus\Quadratus\obj\Debug\Quadratus.Quadratic.resources
+C:\Users\Dariel\source\repos\Quadratus\Quadratus\obj\Debug\Quadratus.History.resources
+C:\Users\Dariel\source\repos\Quadratus\Quadratus\obj\Debug\Quadratus.Linear.resources
+C:\Users\Dariel\source\repos\Quadratus\Quadratus\obj\Debug\Quadratus.Exponential.resources
+C:\Users\Dariel\source\repos\Quadratus\Quadratus\obj\Debug\Quadratus.Profile.resources
+C:\Users\Dariel\source\repos\Quadratus\Quadratus\bin\Debug\Quadratus.exe.manifest
+C:\Users\Dariel\source\repos\Quadratus\Quadratus\bin\Debug\Quadratus.application
+C:\Users\Dariel\source\repos\Quadratus\Quadratus\obj\Debug\Quadratus.exe.manifest
+C:\Users\Dariel\source\repos\Quadratus\Quadratus\obj\Debug\Quadratus.application

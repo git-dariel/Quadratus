@@ -47,7 +47,6 @@ namespace Quadratus
                     com.Parameters.AddWithValue("@password", password);
                     com.ExecuteNonQuery();
                     MessageBox.Show("Student Added Successfully!");
-                
                
             }
             catch (Exception ex) { MessageBox.Show("Error: " + ex.Message); }
